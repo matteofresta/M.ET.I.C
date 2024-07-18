@@ -1,0 +1,210 @@
+@font-face
+{
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face
+{
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-Bold.ttf');
+    font-weight: bold;
+}
+
+
+
+:root
+{
+    --clr-primary-400: hsl(40, 90%, 60%);
+
+    --ff-poppins: 'Poppins', sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-poppins);
+    font-weight: normal;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+.wrapper-nav
+{
+    padding: 2rem;
+    height: 1.5rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Critical for pseudo-element positioning */
+    box-shadow:
+            2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
+            5.4px 1.5px 14.4px rgba(0, 0, 0, 0.045),
+            9.7px 2.6px 25.9px rgba(0, 0, 0, 0.055),
+            16.1px 4.3px 43px rgba(0, 0, 0, 0.065),
+            26.5px 7.1px 70.9px rgba(0, 0, 0, 0.075),
+            46.2px 12.5px 123.9px rgba(0, 0, 0, 0.089),
+            100px 27px 268px rgba(0, 0, 0, 0.12)
+;
+}
+
+.wrapper-nav::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-primary-400);
+    opacity: 0.8;
+    z-index: -1; /* Places the pseudo-element behind the content */
+    transition: .5s ease-in-out;
+}
+
+.wrapper-nav:hover::before
+{
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+
+
+.wrapper-nav img
+{
+    width: auto;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.wrapper-nav img:hover
+{
+    box-shadow: 7.5px 7.5px 9px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+
+}
+
+ul
+{
+    display: flex;
+    gap: 1rem;
+}
+
+li a
+{
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+}
+
+li a::after
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: black;
+    transform-origin: left;
+    transition: .5s ease-in-out;
+    border-radius: .5rem;
+}
+
+li a:hover::after
+{
+    width: 100%;
+}
+
+.col-Image-Website img
+{
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+    box-shadow:
+            2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
+            5.4px 1.5px 14.4px rgba(0, 0, 0, 0.045),
+            9.7px 2.6px 25.9px rgba(0, 0, 0, 0.055),
+            16.1px 4.3px 43px rgba(0, 0, 0, 0.065),
+            26.5px 7.1px 70.9px rgba(0, 0, 0, 0.075),
+            46.2px 12.5px 123.9px rgba(0, 0, 0, 0.089),
+            100px 27px 268px rgba(0, 0, 0, 0.12)
+;
+
+}
