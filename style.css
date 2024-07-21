@@ -103,6 +103,17 @@ textarea:not([rows]) {
     scroll-margin-block: 5ex;
 }
 
+::-webkit-scrollbar
+{
+    background: var(--clr-primary-400);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: black;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
 .wrapper-nav
 {
     padding: 2rem;
@@ -110,7 +121,7 @@ textarea:not([rows]) {
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative; /* Critical for pseudo-element positioning */
     box-shadow:
             2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
@@ -143,6 +154,13 @@ textarea:not([rows]) {
     transition: .5s ease-in-out;
 }
 
+.wrapper-nav .col, col > img
+{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
 
 .wrapper-nav img
 {
@@ -164,9 +182,19 @@ ul
 {
     display: flex;
     gap: 1rem;
+    color: whitesmoke;
+    text-shadow:
+            2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
+            5.4px 1.5px 14.4px rgba(0, 0, 0, 0.045),
+            9.7px 2.6px 25.9px rgba(0, 0, 0, 0.055),
+            16.1px 4.3px 43px rgba(0, 0, 0, 0.065),
+            26.5px 7.1px 70.9px rgba(0, 0, 0, 0.075),
+            46.2px 12.5px 123.9px rgba(0, 0, 0, 0.089),
+            100px 27px 268px rgba(0, 0, 0, 0.12)
+;
 }
 
-li a
+li > a
 {
     text-decoration: none;
     position: relative;
@@ -181,7 +209,7 @@ li a::after
     height: 3px;
     bottom: -4px;
     left: 0;
-    background-color: black;
+    background-color: whitesmoke;
     transform-origin: left;
     transition: .5s ease-in-out;
     border-radius: .5rem;
@@ -192,11 +220,20 @@ li a:hover::after
     width: 100%;
 }
 
+.col-Image-Website
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .col-Image-Website img
 {
     width: 100%;
     height: 50rem;
     object-fit: cover;
+    filter: blur(2.5px);
     box-shadow:
             2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
             5.4px 1.5px 14.4px rgba(0, 0, 0, 0.045),
@@ -206,5 +243,50 @@ li a:hover::after
             46.2px 12.5px 123.9px rgba(0, 0, 0, 0.089),
             100px 27px 268px rgba(0, 0, 0, 0.12)
 ;
+}
 
+.col-title
+{
+    position: absolute;
+}
+
+.col-title h1
+{
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 4rem;
+    text-shadow:
+            2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
+            5.4px 1.5px 14.4px rgba(0, 0, 0, 0.045),
+            9.7px 2.6px 25.9px rgba(0, 0, 0, 0.055),
+            16.1px 4.3px 43px rgba(0, 0, 0, 0.065),
+            26.5px 7.1px 70.9px rgba(0, 0, 0, 0.075),
+            46.2px 12.5px 123.9px rgba(0, 0, 0, 0.089),
+            100px 27px 268px rgba(0, 0, 0, 0.12)
+;
+}
+
+.chi-siamo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+
+.chi-siamo h1
+{
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.chi-siamo p
+{
+    width: 50%;
+    text-align: center;
+    line-height: 2.5rem;
 }
