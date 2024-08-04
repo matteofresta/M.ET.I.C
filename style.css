@@ -16,6 +16,7 @@
 
 :root
 {
+    --clr-primary-600: hsl(0, 0%, 50%);
     --clr-primary-400: hsl(40, 90%, 60%);
 
     --ff-poppins: 'Poppins', sans-serif;
@@ -102,6 +103,14 @@ textarea:not([rows]) {
 :target {
     scroll-margin-block: 5ex;
 }
+
+/* === CSS UTILITIES ===*/
+
+.clr-600 { color: var(--clr-primary-600);}
+
+.fw-600 { font-weight: bold;}
+
+/* === CSS STYLING === */
 
 ::-webkit-scrollbar
 {
@@ -266,7 +275,7 @@ li a:hover::after
 ;
 }
 
-.chi-siamo
+.azienda
 {
     display: flex;
     justify-content: center;
@@ -277,16 +286,101 @@ li a:hover::after
 }
 
 
-.chi-siamo h1
+.azienda h1
 {
     font-weight: bold;
     font-size: 2rem;
     text-decoration: underline;
 }
 
-.chi-siamo p
+.azienda p
 {
     width: 50%;
     text-align: center;
     line-height: 2.5rem;
+}
+
+hr
+{
+    width: 60vw;
+}
+
+.azienda h1
+{
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.prodotti
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.prodotti img
+{
+    object-fit: cover;
+    width: 30rem;
+    height: 30rem;
+    transition: .8s ease-in-out;
+    cursor: pointer;
+    border-radius: 0.8rem;
+}
+
+.prodotti img:hover
+{
+    transition: .5s ease-in-out;
+    transform: scale(1.025);
+    box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.3);
+}
+
+.prodotto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.prodotto-text
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 1rem;
+}
+
+.prodotto-text button
+{
+    width: 50%;
+    height: 2.5rem;
+    background-color: royalblue;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.prodotto-text button:hover
+{
+    background-color: #35457e;
+    color: whitesmoke;
+    transition: .5s;
+}
+
+@media (max-width: 1200px)
+{
+    .col-Image-Website h1
+    {
+        font-size: 1.5rem;
+    }
+    .prodotti
+    {
+        grid-template-columns: 1fr;
+    }
 }
