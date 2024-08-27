@@ -415,4 +415,8 @@ footer .col ul
     {
         grid-template-columns: 1fr;
     }
+    footer
+    {
+        justify-content: center;
+    }
 }
