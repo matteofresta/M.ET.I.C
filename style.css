@@ -124,14 +124,11 @@ textarea:not([rows]) {
     box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
 }
 
-header
-{
-    height: 100svh;
-}
-
-.burger-menu
-{
+header {
     position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1002; /* Ensures header stays on top of other elements */
 }
 
 .burger-menu {
@@ -207,7 +204,7 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Critical for pseudo-element positioning */
+    position: relative;
     box-shadow:
             2.3px 0.6px 6.2px rgba(0, 0, 0, 0.031),
             5.4px 1.5px 14.4px rgba(0, 0, 0, 0.045),
@@ -316,7 +313,7 @@ li a:hover::after
 .col-Image-Website img
 {
     width: 100%;
-    height: 95svh;
+    height: 100svh;
     object-fit: cover;
     filter: blur(2.5px);
     box-shadow:
