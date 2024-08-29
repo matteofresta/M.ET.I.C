@@ -129,6 +129,11 @@ header
     height: 100svh;
 }
 
+.nav
+{
+    position: fixed;
+}
+
 .burger-menu {
     font-size: 30px;
     font-weight: bold;
