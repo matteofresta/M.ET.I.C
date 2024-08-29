@@ -42,6 +42,7 @@ html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+    scroll-behavior: smooth;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -121,6 +122,76 @@ textarea:not([rows]) {
 {
     background: black;
     box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+header
+{
+    height: 100svh;
+}
+
+.burger-menu {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 1001;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar a:nth-child(1)
+{
+    font-size: 3rem;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Show the burger menu and hide the default menu on smaller screens */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .wrapper-nav {
+        display: none; /* Hide the original menu on small screens */
+    }
 }
 
 .wrapper-nav
@@ -240,7 +311,7 @@ li a:hover::after
 .col-Image-Website img
 {
     width: 100%;
-    height: 50rem;
+    height: 95svh;
     object-fit: cover;
     filter: blur(2.5px);
     box-shadow:
@@ -364,6 +435,7 @@ hr
     cursor: pointer;
     transition: .5s;
     color: black;
+    margin-top: 1em;
 }
 
 .prodotto-text button:hover
