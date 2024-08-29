@@ -311,7 +311,6 @@ hr
     font-size: 2rem;
     text-decoration: underline;
 }
-
 .prodotti
 {
     display: grid;
@@ -364,6 +363,7 @@ hr
     border: 2px solid transparent;
     cursor: pointer;
     transition: .5s;
+    color: black;
 }
 
 .prodotto-text button:hover
@@ -373,8 +373,7 @@ hr
     transition: .5s;
 }
 
-footer
-{
+footer {
     width: 100%;
     height: 15rem;
     margin-top: 5rem;
@@ -384,29 +383,41 @@ footer
     align-items: center;
 }
 
-footer .footer-content
-{
+footer .footer-content {
     display: flex;
+    width: 100%;
     margin: 10rem;
     gap: 3.5rem;
     align-items: center;
 }
 
-footer .col
-{
+footer .footer-content .col:nth-child(1) {
+    margin-right: auto;
+}
+
+footer .col {
     display: flex;
     flex-direction: column;
 }
 
-footer .col ul
-{
+footer .col img {
+    width: 10rem;
+}
+
+footer .col ul {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
 
-@media (max-width: 1200px)
+
+
+@media (max-width: 40em)
 {
+    .wrapper-nav .col ul
+    {
+        display: none;
+    }
     .col-Image-Website h1
     {
         font-size: 1.5rem;
@@ -415,8 +426,24 @@ footer .col ul
     {
         grid-template-columns: 1fr;
     }
-    footer
-    {
+    footer {
         justify-content: center;
+        height: 30rem;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    footer .footer-content .col {
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-content .col img {
+        margin: 0 auto;
     }
 }
