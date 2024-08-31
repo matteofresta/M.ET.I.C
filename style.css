@@ -196,10 +196,9 @@ header {
     }
 }
 
-.wrapper-nav
-{
+.wrapper-nav {
+    height: 3.5rem;
     padding: 2rem;
-    height: 1.5rem;
     width: auto;
     display: flex;
     align-items: center;
@@ -212,8 +211,7 @@ header {
             16.1px 4.3px 43px rgba(0, 0, 0, 0.065),
             26.5px 7.1px 70.9px rgba(0, 0, 0, 0.075),
             46.2px 12.5px 123.9px rgba(0, 0, 0, 0.089),
-            100px 27px 268px rgba(0, 0, 0, 0.12)
-;
+            100px 27px 268px rgba(0, 0, 0, 0.12);
 }
 
 .wrapper-nav::before
@@ -234,6 +232,14 @@ header {
 {
     opacity: 1;
     transition: .5s ease-in-out;
+}
+
+.wrapper-nav .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0 1rem;
 }
 
 .wrapper-nav .col, col > img
@@ -484,6 +490,94 @@ footer .col ul {
     gap: 0;
 }
 
+/* Stile del form */
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 120px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Necessario per posizionare correttamente i messaggi di errore */
+}
+
+label {
+    margin-bottom: 10px; /* Distanza dal campo input */
+    font-weight: bold;
+    color: #333;
+}
+
+form .col small {
+    color: grey;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Riduce la distanza tra l'input e il messaggio di errore */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: var(--clr-primary-400);
+    transition: background-color 0.3s;
+}
+
+/* Stile per i messaggi di errore */
+.error-message {
+    color: red !important; /* Usa !important per garantire che il colore rosso prevalga su altre regole */
+    font-size: 0.85rem;
+    font-weight: bold; /* Aggiunge grassetto al testo di errore */
+    display: none; /* Nasconde i messaggi di errore inizialmente */
+    margin-top: 5px; /* Distanza minima sotto l'input */
+    margin-bottom: 10px;
+}
+
+/* Aggiunge un asterisco prima del messaggio di errore */
+.error-message::before {
+    content: '* ';
+    color: red; /* Assicura che anche l'asterisco sia rosso */
+}
+
+/* Stile per l'outline rosso */
+input.invalid, textarea.invalid {
+    border: 2px solid red !important; /* Usa !important per sovrascrivere altre regole di stile */
+}
+
+
+
+
 
 
 @media (max-width: 40em)
@@ -530,5 +624,9 @@ footer .col ul {
     footer .footer-content .col img {
         margin: 0 auto;
         cursor: pointer;
+    }
+    form {
+        margin: 120px 20px;
+        padding: 15px;
     }
 }
