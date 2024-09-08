@@ -632,6 +632,16 @@ input.invalid, textarea.invalid {
     {
         font-size: 1.5rem;
     }
+    .carousel-item
+    {
+        padding: 1.5rem;
+        flex: 0 0 15%;
+    }
+
+    .carousel-item:hover
+    {
+        animation-play-state: running;
+    }
     .prodotti
     {
         grid-template-columns: 1fr;
