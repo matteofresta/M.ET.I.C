@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+
+    // Add event listeners to pause/resume animation on hover
+    items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            track.style.animationPlayState = 'paused'; // Pause the animation
+        });
+
+        item.addEventListener('mouseleave', () => {
+            track.style.animationPlayState = 'running'; // Resume the animation
+        });
+    });
+});
+
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Previene l'invio del form
 
@@ -79,4 +95,3 @@ function toggleSidebar() {
         burgerMenu.style.display = "none"; // Hide burger menu
     }
 }
-

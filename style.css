@@ -354,6 +354,48 @@ li a:hover::after
 ;
 }
 
+.carousel {
+    margin-block: 4rem;
+    overflow: hidden;
+    width: auto;
+    max-width: 1200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-track {
+    display: flex;
+    width: 200%;
+    animation: scroll 15s linear infinite;
+    animation-play-state: running; /* Ensure animation starts in running state */
+}
+
+.carousel-item {
+    flex: 0 0 10%; /* Adjust width for each item */
+    padding: 30px;
+    align-self: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hover effect for enlarging the item */
+.carousel-item:hover {
+    transform: scale(1.2); /* Enlarge the item on hover */
+    z-index: 1; /* Make sure the hovered item appears on top */
+    transition: transform 0.3s ease;
+}
+
 .azienda
 {
     display: flex;
