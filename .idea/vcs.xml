@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/AbletonWebsite" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/M.ET.I.C" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Netto" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/techdivision" vcs="Git" />
   </component>
 </project>
