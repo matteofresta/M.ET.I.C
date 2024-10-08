@@ -1,0 +1,36 @@
+
+.container {
+    margin-block: 4rem;
+    overflow: hidden;
+    width: auto;
+    max-width: 1200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    animation: slider 15s linear infinite;
+    animation-play-state: running;
+}
+
+.slider img {
+    flex: 0 0 20%;
+    padding: 30px;
+    align-self: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 50rem;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
