@@ -41,6 +41,9 @@ import img16 from './img16.jpg'
 import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
+import song4 from  './song4.mp3'
+import song5 from  './song5.mp3'
+import song6 from  './song6.mp3'
 
 export const assets = {
     bell_icon,
@@ -70,46 +73,46 @@ export const assets = {
 }
 
 export const albumsData = [
-    {   
+    {
         id:0,
         name: "Top 50 Global",
         image: img8,
-        desc:"Your weekly update of the most played tracks",
+        desc:"By Spotify",
         bgColor:"#2a4365"
     },
-    {   
+    {
         id:1,
-        name: "Top 50 India",
+        name: "Top 50 Italy",
         image: img9,
-        desc:"Your weekly update of the most played tracks",
-        bgColor:"#22543d"
+        desc:"By Spotify",
+        bgColor:"#2a4365"
     },
-    {   
+    {
         id:2,
         name: "Trending India",
         image: img10,
-        desc:"Your weekly update of the most played tracks",
+        desc:"By Spotify",
         bgColor:"#742a2a"
     },
-    {   
+    {
         id:3,
         name: "Trending Global",
         image: img16,
-        desc:"Your weekly update of the most played tracks",
+        desc:"By Spotify",
         bgColor:"#44337a"
     },
-    {   
+    {
         id:4,
         name: "Mega Hits,",
         image: img11,
-        desc:"Your weekly update of the most played tracks",
+        desc:"By Spotify",
         bgColor:"#234e52"
     },
-    {   
+    {
         id:5,
         name: "Happy Favorites",
         image: img15,
-        desc:"Your weekly update of the most played tracks",
+        desc:"By Spotify",
         bgColor:"#744210"
     }
 ]
@@ -125,49 +128,49 @@ export const songsData = [
     },
     {
         id:1,
-        name: "Song Two",
+        name: "golden hour",
         image: img2,
         file:song2,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:20"
+        desc:"JVKE",
+        duration:"3:30"
     },
     {
         id:2,
-        name: "Song Three",
+        name: "snowfall",
         image: img3,
         file:song3,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:32"
+        desc:"øneheart x reidenshi",
+        duration:"2:03"
     },
     {
         id:3,
-        name: "Song Four",
+        name: "BLUE",
         image: img4,
-        file:song1,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"2:50"
+        file:song4,
+        desc:"Billie Eilish",
+        duration:"5:43"
     },
     {
         id:4,
-        name: "Song Five",
+        name: "NEVER ENDING STORY",
         image: img5,
-        file:song2,
-        desc:"Put a smile on your face with these happy tunes",
-        duration:"3:10"
+        file:song5,
+        desc:"kathi O.",
+        duration:"3:21"
     },
     {
         id:5,
-        name: "Song Six",
-        image: img14    ,
-        file:song3,
-        desc:"Put a smile on your face with these happy tunes",
+        name: "Cutting My Fingers Off",
+        image: img6,
+        file:song6,
+        desc:"Turnover",
         duration:"2:45"
     },
     {
         id:6,
         name: "Song Seven",
         image: img7,
-        file:song1,
+        file:song4,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:18"
     },
@@ -175,7 +178,7 @@ export const songsData = [
         id:7,
         name: "Song Eight",
         image: img12,
-        file:song2,
+        file:song5,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:35"
     }
